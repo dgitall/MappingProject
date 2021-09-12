@@ -4,7 +4,9 @@ library(RColorBrewer)
 
 # From https://opendata.minneapolismn.gov/. Search for 'Communities' and
 # 'stormwater catch basins' to find the files. Download them and unzip into the
-# local directories
+# local directories. NOTE: You have to unzip all of the files into the directory
+# because the *.shp file has dependencies on all of the other files. If you don't,
+# the call to readOGR() will fail. 
 communities <- readOGR("./Communities-shp/Minneapolis_Communities.shp",
                        layer="Minneapolis_Communities", GDAL1_integer64_policy = TRUE)
 stormbasins <- readOGR("./Stormwater_Catch_Basins-shp/Stormwater_Catch_Basins.shp",
