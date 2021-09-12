@@ -55,5 +55,4 @@ my_map <- leaflet(communities) %>%
               opacity = 1
     )
 
-
 print(my_map)
