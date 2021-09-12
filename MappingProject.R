@@ -51,7 +51,7 @@ my_map <- leaflet(communities) %>%
                      ) %>%
     # Add a legend of the colors matched to the feature types 
     addLegend("bottomright", pal = palFeatureType, values = ~stormbasins$FEATURE_TY,
-              title = "Stormwater Catchment Facilities",
+              title = paste("Stormwater Catchment Facilities", '<br>',"Project Date: 9/11/2021"),
               opacity = 1
     )
 
